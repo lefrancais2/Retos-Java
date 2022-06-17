@@ -19,6 +19,8 @@ public class Texto {
     
     /** 
      * Metodo showMessage muestra en pantalla la informacion obtenida al pasarle las cadenas del informe y de la revista.
+     * @param cad1 : recibe cadena del informe.
+     * @param cad2 : recibe cadena de la revista.
      */
     public static void showMessage(String cad1,String cad2){
         int[] values = countChars(cad1,cad2);
@@ -32,6 +34,9 @@ public class Texto {
      * Metodo countChars cuenta los caracteres de las cadenas info y review y devuelve un array de entero
      * con los valores de la longitud de las cadenas y un valor adicional de la cantidad de caracteres disponible
      * para realizar la informacion en la revista.
+     * @param info : recibe cadena del informe.
+     * @param review : recibe cadena de la revista.
+     * @return array entero
      */
     public static int[] countChars(String info, String review){
         /*
@@ -43,10 +48,6 @@ public class Texto {
         
         int maxCharsReview = 5000;
         
-        /*
-            En la tercera posicion del array guardaremos la cantidad de caracteres que quedan por rellenar 
-            para ello se resta el numero maximo de caracteres que puede tener la revista y la cantidad de caracteres que ya se ha editado.
-        */
         diff[2] = maxCharsReview - diff[1];
         
         return diff;        
